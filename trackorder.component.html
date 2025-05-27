@@ -1,0 +1,28 @@
+<div class="container-fluid min-vh-100">
+  <h1 class="text-center text-dark py-5">Track Your Cake Order</h1>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-10 col-md-6 col-lg-4">
+      <div class="card shadow-sm rounded-3">
+        <div class="card-body">
+          <form (ngSubmit)="trackOrder()">
+            <div class="mb-3">
+              <label class="form-label">Order ID</label>
+              <input type="text" class="form-control" [(ngModel)]="orderId" name="orderId" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" [(ngModel)]="customerName" name="customerName" required>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary w-100">Track Order Status</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="alert alert-info text-center mt-3" *ngIf="orderStatus">{{ orderStatus }}
+      </div>
+    </div>
+  </div>
+</div>

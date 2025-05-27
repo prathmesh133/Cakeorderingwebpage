@@ -1,0 +1,56 @@
+<div class="container-fluid bg-dark text-white">
+    <div class="row">
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3 footer">
+            <h4 class="connecton text-white mt-4">Let's Connect On</h4>
+            <div class="mt-3">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="ms-2">11 Aberdeen Street, Boston MA, USA 02215</span><br>
+                <i class="mt-2 fa-solid fa-envelope"></i>
+                <span class="ms-2">cakeshop&#64;gmail.com</span><br>
+                <i class=" mt-2 fa-solid fa-phone"></i>
+                <span class="ms-2">1800-123-CAKE</span>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3 footer">
+            <h5 class="usefullinks mt-4">Useful Links</h5>
+            <h6 class="text-white">Home</h6>
+            <h6 class="text-white">Order Cake</h6>
+            <h6 class="text-white">Track Order</h6>
+            <h6 class="text-white">Make Payment</h6>
+            <h6 class="text-white">Contact</h6>
+        </div>
+
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3 footer">
+            <h4 class="text-white mt-4">Newsletters</h4>
+            <h6 class="latest-trends text-white mb-4">Subscribe & stay updated with our latest offers</h6>
+            <div class="input-group">
+                <form [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+                    <input type="email" formControlName="email" class="form-control" placeholder="Enter Email Address">
+                    <div class="d-flex flex-row gap-2 mt-3">
+                      <button type="submit" class="btn btn-primary">Subscribe</button>
+                      <button type="button" class="btn btn-secondary" (click)="resetForm()">Reset</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3 social">
+            <h4 class="follow mt-4">Follow Me</h4>
+            <div class="social mb-2">Let us be social</div>
+            <div class="media d-flex align-items-center">
+                <i class="facebook fa-brands fa-facebook ms-2"></i>
+                <i class="twitter fa-brands fa-twitter ms-3"></i>
+                <i class="fa-brands fa-youtube ms-3"></i>
+                <i class="fa-brands fa-square-instagram ms-3"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 mt-4">
+            <h3>CakeShop</h3>
+            <h5 class="copyright">Copyright ©2025 | All rights reserved</h5>
+        </div>
+    </div>
+</div>

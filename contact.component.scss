@@ -1,0 +1,47 @@
+ .container-fluid {
+     background-color: rgb(232, 226, 193);
+ }
+
+ .icon-box {
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     margin-bottom: 15px;
+ }
+
+ .icon {
+     font-size: 1.5rem;
+     color: #007bff;
+ }
+
+ .info-text h5 {
+     margin: 0;
+     font-weight: 600;
+ }
+
+ .info-text p {
+     margin: 0;
+     color: #6c757d;
+ }
+
+ form {
+     padding: 1rem;
+     border-radius: 10px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+     background-color: white;
+ }
+
+ .btn-secondary:hover,
+ .btn-primary:hover {
+     background-color: green;
+ }
+
+ @media screen and (max-width: 576px) {
+     .btn-secondary {
+         width: 120px;
+     }
+
+     .row.g-3 .col-12 {
+         margin-bottom: 1rem;
+     }
+ }

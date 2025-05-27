@@ -1,0 +1,49 @@
+ .container-fluid {
+   background-color: rgb(232, 226, 193);
+ }
+
+ header {
+   padding: 2rem 1rem;
+ }
+
+ form,
+ .order-summary {
+   padding: 2rem;
+   border-radius: 10px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+ }
+
+ .order-summary {
+   margin-top: 2rem;
+ }
+
+ .btn-secondary:hover,
+ .btn-primary:hover,
+ .btn-warning:hover {
+   background-color: green;
+ }
+
+ @media screen and (max-width: 576px) {
+   .btn-secondary {
+     width: 120px;
+   }
+
+   .row.g-3 .col-12 {
+     margin-bottom: 1rem;
+   }
+
+   .icon-text {
+     flex-direction: column;
+     align-items: flex-start !important;
+     gap: 10px;
+   }
+
+   .icon-text>div {
+     width: 100%;
+   }
+ }
+
+ .icon {
+   color: #007bff;
+   margin-right: 10px;
+ }

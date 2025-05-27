@@ -1,0 +1,117 @@
+
+
+<div class="container-fluid">
+  <header class="text-center">
+    <h1 class="text-dark">Order Your Favorite Cake</h1>
+  </header>
+
+  <form class="row g-3" (ngSubmit)="submitOrder()">
+    <div class="col-md-6">
+      <label class="form-label">Order ID</label>
+      <input type="text" class="form-control" required [(ngModel)]="order.orderId" name="orderId">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" required [(ngModel)]="order.name" name="name">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Email</label>
+      <input type="email" class="form-control" required [(ngModel)]="order.email" name="email">
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Contact No</label>
+      <input type="text" class="form-control" required [(ngModel)]="order.contactNo" name="contactNo">
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Address</label>
+      <textarea class="form-control" rows="3" required [(ngModel)]="order.address" name="address"></textarea>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-12 col-sm-4">
+        <label for="delivery-date">Date</label><br>
+        <input type="date" class="form-control mt-2" id="delivery-date" min="2025-05-13" required
+          [(ngModel)]="order.date" name="date">
+      </div>
+
+      <div class="col-12 col-sm-4">
+        <label for="delivery-time">Time</label><br>
+        <input type="time" class="form-control mt-2" id="time" min="10:00" max="23:00" step="1800" required
+          [(ngModel)]="order.time" name="time">
+      </div>
+
+      <div class="col-12 col-sm-4">
+        <label class="form-label">Pincode</label><br>
+        <input type="text" class="form-control" required [(ngModel)]="order.pincode" name="pincode">
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Cake Flavours with Price</label>
+      <select class="form-select" required [(ngModel)]="order.cakeType" name="cakeType">
+        <option>Chocolate Cake - 250Rs</option>
+        <option>Vanilla Cake - 150Rs</option>
+        <option>Red Velvet Cake - 320Rs</option>
+        <option>Cheese Cake - 230Rs</option>
+        <option>Strawberry Cake - 280Rs</option>
+        <option>Butterscotch Cake - 260Rs</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Cash On Delivery</label>
+      <select class="form-select" required [(ngModel)]="order.CashonDelivery" name="CashonDelivery">
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Online Payment</label>
+      <select class="form-select" [(ngModel)]="order.onlinePayment" name="onlinePayment">
+        <option>Google Pay</option>
+        <option>PhonePe</option>
+        <option>Amazon Pay</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label class="form-label">Quantity</label>
+      <input type="number" min="1" max="10" class="form-control" required [(ngModel)]="order.quantity" name="quantity">
+    </div>
+
+    <div class="col-12">
+      <label class="form-label">Message on Cake</label>
+      <input type="text" class="form-control" [(ngModel)]="order.message" name="message">
+    </div>
+
+    <div class="col-4">
+      <button type="submit" class="btn btn-secondary mt-4">Place Order</button>
+    </div>
+  </form>
+
+  <div *ngIf="submitted" class="order-summary">
+    <h2>Order Summary</h2>
+    <p><strong>Name:</strong> {{order.name}}</p>
+    <p><strong>Email:</strong> {{order.email}}</p>
+    <p><strong>Address:</strong> {{order.address}}</p>
+    <p><strong>Contact No:</strong> {{order.contactNo}}</p>
+    <p><strong>Date:</strong> {{order.date}}</p>
+    <p><strong>Time:</strong> {{order.time}}</p>
+    <p><strong>Pincode:</strong> {{order.pincode}}</p>
+    <p><strong>Cake Type:</strong> {{order.cakeType}}</p>
+    <p><strong>Cash On Delivery:</strong> {{order.CashonDelivery}}</p>
+    <p><strong>Online Payment:</strong> {{order.onlinePayment}}</p>
+    <p><strong>Quantity:</strong> {{order.quantity}}</p>
+    <p><strong>Message:</strong> {{order.message}}</p>
+
+    <div class="d-flex flex-column flex-sm-row gap-2 mt-3">
+      <button class="btn btn-primary" (click)="downloadReceipt()">Download Receipt</button>
+      <button class="btn btn-warning" (click)="resetOrder()">Place Another Order</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+.container-fluid {
+  background-color: rgb(232, 226, 193);
+  padding: 2rem;
+}
+
+.card {
+  background-color: #fdf7e6;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2,
+h4 {
+  color: #6d4c41;
+}
+
+.custom-confirm-btn {
+  width: 148px;
+}
+
+.custom-confirm-btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+  background-color: gold;
+}
+
+.qr-code {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .qr-code {
+    max-width: 120px;
+  }
+}
